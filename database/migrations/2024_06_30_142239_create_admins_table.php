@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('phone', 20)->nullable();
             $table->enum('status', ['active', 'inactive']);
             $table->string('password');
+            $table->text('fcm_token')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

@@ -13,6 +13,14 @@ return new class extends Migration
     {
         Schema::create('supervisors', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('phone', 20)->nullable();
+            $table->enum('status', ['active', 'inactive']);
+            $table->string('password');
+            $table->text('fcm_token')->nullable();
+            $table->rememberToken();
             $table->timestamps();
         });
     }

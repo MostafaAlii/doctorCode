@@ -13,7 +13,11 @@ return new class extends Migration
     {
         Schema::create('driver_profiles', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->uuid('uuid')->unique();
+            $table->text('address')->nullable();
+            $table->text('bio')->nullable();
+            $table->foreignId('driver_id')->index()->constrained()->cascadeOnDelete();
+            $table->string('avatar')->nullable();
         });
     }
 
