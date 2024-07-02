@@ -1,5 +1,5 @@
 <?php
-namespace App\Models\Traits\Api;
+namespace App\Models\Traits;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 trait ApiResponseTrait {

@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'sqlite'),
+    'default' => env('DB_CONNECTION', 'landlord'),
 
     /*
     |--------------------------------------------------------------------------
@@ -37,6 +37,24 @@ return [
             'database' => env('DB_DATABASE', database_path('database.sqlite')),
             'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
+        ],
+
+        'tenant' => [
+            'driver' => 'mysql',
+            'database' => null,
+            'host' => '127.0.0.1',
+            'username' => 'root',
+            'password' => '',
+            // And other options if needed ...
+        ],
+
+        'landlord' => [
+            'driver' => 'mysql',
+            'database' => 'name_of_landlord_db',
+            'host' => '127.0.0.1',
+            'username' => 'root',
+            'password' => '',
+            // And other options if needed ...
         ],
 
         'mysql' => [

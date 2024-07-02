@@ -1,5 +1,5 @@
 <?php
-namespace Database\Seeders;
+namespace Database\Seeders\tenants;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\{DB, Schema};
